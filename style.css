@@ -21,18 +21,40 @@ img {
     margin: 0 0 40px 0;
 }
 
+.btn-primary {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+
+
+}
+
+.btn-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.row__products {
+    display: none;
+}
+
 .products {
     display: none;
 }
 
-.active {
+.row--active {
     display: block;
 }
 
-/* .list-group {
-    position: fixed;
-    
-} */
+.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 .product {
     background: #fff none repeat scroll 0 0;
