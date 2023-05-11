@@ -27,8 +27,6 @@ img {
     background-color: #fff;
     color: #555;
     border: 1px solid #ddd;
-
-
 }
 
 .btn-group {
@@ -53,19 +51,30 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: static;
 }
 
+.col-md-4 {
+    position: static;
+}
+
+.col-sm-4 {
+    position: static;
+}
 
 .product {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #c0c0c0;
-    height: 390px;
+    min-height: 390px;
     overflow: hidden;
     padding: 25px 15px;
-    position: relative;
     text-align: center;
     transition: all 0.5s ease 0s;
     margin-bottom: 20px;
+}
+
+.product--active {
+    margin-bottom: 0;
 }
 
 .product:hover {
@@ -74,6 +83,10 @@ img {
 
 .product-img {
     height: 260px;
+}
+
+.product-img--active {
+    width: 60%;
 }
 
 .product-title a {
@@ -85,6 +98,16 @@ img {
 .product-desc {
     max-height: 60px;
     overflow: hidden;
+    display: none;
+}
+
+.product__text--active {
+    width: 40%;
+    
+}
+
+.product-desc--active {
+    display: block;
 }
 
 .product-price {
@@ -95,4 +118,56 @@ img {
     color: #d51e08;
     font-size: 18px;
     font-weight: 500;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.modal__item {
+    position: relative;
+    display: flex;
+    width: 120vh;
+    height: 75vh;
+    z-index: 10;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.modal__item-img {
+    display: flex;
+    width: 60%;
+}
+
+.modal__item-descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.modal--active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
 }
