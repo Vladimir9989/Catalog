@@ -21,18 +21,22 @@ tabsBtn.forEach(function (element) {
         tabsBtn.forEach(function (btn) { btn.classList.remove('btn-active') });
         e.currentTarget.classList.add('btn-active');
 
+        tabsItemProducts.forEach(item => {item.classList.remove('row--active')})
+
         tabsItem.forEach(function (element) { element.classList.remove('active') });
         document.querySelector(`[data-target="${path}"]`).classList.add('active');
-        if (element.textContent === 'Книги') {
-            document.querySelector('.tab1').classList.add('row--active')
-        } else if (element.textContent === 'Журналы') {
-            document.querySelector('.tab5').classList.add('row--active')
-        } else if (element.textContent === 'Брошюры') {
-            document.querySelector('.tab9').classList.add('row--active')
-        } else if (element.textContent === 'Листовки') {
-            document.querySelector('.tab13').classList.add('row--active')
+        if (element.textContent === 'Издательская полиграфия') {
+            document.querySelector('.one-tab').classList.add('row--active')
+        } else if (element.textContent === 'Корпоративная полиграфия') {
+            document.querySelector('.two-tab').classList.add('row--active')
+        } else if (element.textContent === 'Рекламная полиграфия') {
+            document.querySelector('.three-tab').classList.add('row--active')
+        } else if (element.textContent === 'Упаковка') {
+            document.querySelector('.four-tab').classList.add('row--active')
         } else if (element.textContent === 'Сувенирная продукция') {
-            document.querySelector('.tab17').classList.add('row--active')
+            document.querySelector('.five-tab').classList.add('row--active')
+        } else if (element.textContent === 'Флексопечать (этикетки для продукции)') {
+            document.querySelector('.six-tab').classList.add('row--active')
         }
 
     });
