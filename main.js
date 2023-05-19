@@ -62,11 +62,11 @@ product.forEach((item) => {
         item.classList.add('product--active')
         modal.classList.add('modal--active')
         item.children[1].children[1].classList.add('product-desc--active')
-        // productImg.classList.add('product-img--active')
-        // productText.classList.add('product__text--active')
         console.log(item.children[0].innerHTML);
         modalItemImg.innerHTML = item.children[0].innerHTML
         modalItemDescr.innerHTML = item.children[1].innerHTML
+        item.children[1].children[1].classList.remove('product-desc--active')
+        // modalItemDescr.append(item.children[1])
     })
 });
 
